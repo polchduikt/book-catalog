@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookCatalog">
 
-        <activity android:name=".BookInfoActivity" />
+        <activity android:name=".ui.BookInfoActivity" />
+        <activity android:name=".ui.AddEditBookActivity" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
