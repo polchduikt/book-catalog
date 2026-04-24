@@ -1,8 +1,6 @@
 # BookCatalog
 
-![Main Screen](screenshots/home.jpg)
-
-BookCatalog is a native Android application designed for managing a personal library of books. It features a modern, high-tech "cyber" aesthetic with smooth animations, dark mode default, and a robust local database.
+BookCatalog is a native Android application designed for managing a personal library of books. It features a modern, high-tech aesthetic with smooth animations, dark mode default, and a robust local database.
 
 ## Overview
 
@@ -22,28 +20,15 @@ The app is built as a learning project to demonstrate Android architecture best 
 - Toggle "Favorite" status for quick visual identification.
 
 ### High-Tech UI & Aesthetics
-- Forced dark mode ("Cyber" theme) with deep space backgrounds and neon cyan/purple accents.
+- Forced dark mode with deep space backgrounds and neon cyan/purple accents.
 - Glassmorphism effects on cards (translucent backgrounds with thin neon borders).
 - Smooth `SlideInUp` entry animations for the book list.
 - Dynamic statistics dashboard showing total entities and volume pages.
 - Thematic vector illustrations for empty database states.
 
-## Architecture
-
-The project is structured by architectural layers to ensure separation of concerns:
-
-```text
-app/src/main/java/com/ua/bookcatalog/
-  data/           # Data layer (Room Database)
-    Book.java         # Entity model
-    BookDao.java      # Data Access Object (Queries)
-    BookDatabase.java # Room Database instance manager
-  ui/             # Presentation layer
-    MainActivity.java       # Main list and dashboard
-    AddEditBookActivity.java# Data entry form
-    BookInfoActivity.java   # Detail view
-    BookAdapter.java        # RecyclerView adapter
-```
+<p align="center">
+  <img src="screenshots/home.jpg" alt="Main Screen" width="300" />
+</p>
 
 ## Technology Stack
 
@@ -60,7 +45,7 @@ app/src/main/java/com/ua/bookcatalog/
 ### Prerequisites
 
 - Android Studio (Ladybug or newer recommended)
-- Java Development Kit (JDK) 11 or higher (bundled with Android Studio)
+- Java Development Kit 11 or higher (bundled with Android Studio)
 - Android SDK Platform 36
 
 ### Install & Run
@@ -73,9 +58,3 @@ app/src/main/java/com/ua/bookcatalog/
 
 ### Test Data
 To quickly populate the app and test the UI, tap the three-dot menu in the top right corner of the main screen and select **"Fill Test Data"**.
-
-## Data & Privacy
-
-- All book data is stored locally in an SQLite database on the user's device via Room.
-- No backend servers, cloud storage, or analytics tracking are used.
-- The app requests `INTERNET` permission solely as a fallback for dynamic asset loading, but core operations function 100% offline.
