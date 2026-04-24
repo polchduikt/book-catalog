@@ -27,7 +27,16 @@ The app is built as a learning project to demonstrate Android architecture best 
 - Thematic vector illustrations for empty database states.
 
 <p align="center">
-  <img src="screenshots/home.jpg" alt="Main Screen" width="300" />
+  <b>Main Screen</b><br>
+  <img src="screenshots/main.jpg" alt="Main Screen" width="300" />
+</p>
+<p align="center">
+  <b>Statistics</b><br>
+  <img src="screenshots/statistics.jpg" alt="Statistics" width="300" />
+</p>
+<p align="center">
+  <b>Settings</b><br>
+  <img src="screenshots/settings.jpg" alt="Settings" width="300" />
 </p>
 
 ## Technology Stack
