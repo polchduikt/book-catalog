@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/sort_title" android:title="Sort by Title" />
+    <item android:id="@+id/sort_year" android:title="Sort by Year" />
+    <item android:id="@+id/sort_rating" android:title="Sort by Rating" />
+    <item android:id="@+id/fill_test" android:title="Fill Test Data" />
+    <item android:id="@+id/clear_all" android:title="Delete All Books" />
+</menu>

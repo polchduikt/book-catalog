@@ -94,11 +94,11 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             chipGenre.setText(book.getGenre());
             ratingBar.setRating(book.getRating());
 
-            btnFavorite.setImageResource(
-                    book.isFavorite()
-                            ? android.R.drawable.btn_star_big_on
-                            : android.R.drawable.btn_star_big_off
-            );
+            if (book.isFavorite()) {
+                btnFavorite.setColorFilter(itemView.getContext().getColor(R.color.hi_tech_secondary));
+            } else {
+                btnFavorite.setColorFilter(itemView.getContext().getColor(R.color.hi_tech_surface_variant));
+            }
         }
     }
 }

@@ -43,4 +43,16 @@ public interface BookDao {
 
     @Query("DELETE FROM books")
     void deleteAll();
+
+    @Query("SELECT COALESCE(AVG(rating), 0) FROM books")
+    float getAverageRating();
+
+    @Query("SELECT COALESCE(MAX(pages), 0) FROM books")
+    int getMaxPages();
+
+    @Query("SELECT COUNT(*) FROM books WHERE favorite = 1")
+    int getFavoriteCount();
+
+    @Query("SELECT genre FROM books GROUP BY genre ORDER BY COUNT(genre) DESC LIMIT 1")
+    String getTopGenre();
 }

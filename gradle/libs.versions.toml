@@ -11,6 +11,7 @@ room = "2.7.1"
 recyclerview = "1.4.0"
 lottie = "6.4.0"
 rv_animators = "4.0.2"
+gson = "2.10.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -25,6 +26,7 @@ room-compiler = { group = "androidx.room", name = "room-compiler", version.ref =
 recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 rv-animators = { group = "jp.wasabeef", name = "recyclerview-animators", version.ref = "rv_animators" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

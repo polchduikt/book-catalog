@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.lottie)
     implementation(libs.rv.animators)
+    implementation(libs.gson)
     annotationProcessor(libs.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
