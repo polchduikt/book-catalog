@@ -4,19 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddEditBookActivity">
+    android:background="@color/hi_tech_background"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.AddEditBookActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbarAddEdit"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Add Book"
-            app:titleTextColor="@color/white"
-            app:navigationIcon="@android:drawable/ic_menu_revert" />
+            app:titleCentered="true"
+            app:titleTextColor="@color/hi_tech_primary"
+            app:navigationIcon="@android:drawable/ic_menu_revert"
+            app:navigationIconTint="@color/hi_tech_primary" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -32,17 +38,28 @@
             android:padding="24dp"
             android:gravity="center_horizontal">
 
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="@color/hi_tech_primary"
+                android:layout_marginBottom="24dp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="16dp"
                 android:hint="Book Title"
+                app:boxBackgroundColor="@color/hi_tech_surface"
+                app:boxStrokeColor="@color/hi_tech_primary"
+                app:hintTextColor="@color/hi_tech_primary"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/hi_tech_textPrimary"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -50,14 +67,18 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="16dp"
                 android:hint="Author"
+                app:boxBackgroundColor="@color/hi_tech_surface"
+                app:boxStrokeColor="@color/hi_tech_primary"
+                app:hintTextColor="@color/hi_tech_primary"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etAuthor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/hi_tech_textPrimary"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -72,15 +93,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
                     android:hint="Year"
+                    app:boxBackgroundColor="@color/hi_tech_surface"
+                    app:boxStrokeColor="@color/hi_tech_primary"
+                    app:hintTextColor="@color/hi_tech_primary"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etYear"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/hi_tech_textPrimary"
                         android:inputType="number" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -89,15 +114,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="8dp"
                     android:hint="Pages"
+                    app:boxBackgroundColor="@color/hi_tech_surface"
+                    app:boxStrokeColor="@color/hi_tech_primary"
+                    app:hintTextColor="@color/hi_tech_primary"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPages"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/hi_tech_textPrimary"
                         android:inputType="number" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -108,24 +137,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                android:hint="Genre"
+                android:hint="Category"
+                app:boxBackgroundColor="@color/hi_tech_surface"
+                app:boxStrokeColor="@color/hi_tech_primary"
+                app:hintTextColor="@color/hi_tech_primary"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etGenre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/hi_tech_textPrimary"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Rating Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="My Rating"
-                android:textSize="14sp"
-                android:textColor="?android:attr/textColorSecondary"
+                android:text="RATING"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:textColor="@color/hi_tech_textSecondary"
                 android:layout_marginBottom="8dp" />
 
             <RatingBar
@@ -134,14 +167,20 @@
                 android:layout_height="wrap_content"
                 android:numStars="5"
                 android:stepSize="0.5"
+                android:progressTint="@color/hi_tech_secondary"
+                android:secondaryProgressTint="@color/hi_tech_secondary"
                 android:layout_marginBottom="32dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSave"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Save Book"
+                android:layout_height="60dp"
+                android:text="SAVE BOOK"
                 android:textSize="16sp"
+                android:letterSpacing="0.1"
+                android:textStyle="bold"
+                app:backgroundTint="@color/hi_tech_primary"
+                android:textColor="@color/hi_tech_onPrimary"
                 android:layout_marginBottom="24dp" />
 
         </LinearLayout>

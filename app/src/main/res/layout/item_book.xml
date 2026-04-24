@@ -6,20 +6,25 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
     android:layout_marginTop="8dp"
-    android:layout_marginBottom="4dp"
+    android:layout_marginBottom="8dp"
     android:clickable="true"
     android:focusable="true"
-    app:cardElevation="2dp"
-    app:cardCornerRadius="16dp"
-    style="@style/Widget.Material3.CardView.Elevated">
+    style="@style/HiTechCardView">
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/hi_tech_primary" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingStart="20dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
 
-        <!-- Top row: Title + Favorite -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,6 +38,7 @@
                 android:layout_weight="1"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textColor="@color/hi_tech_textPrimary"
                 android:maxLines="2"
                 android:ellipsize="end" />
 
@@ -42,34 +48,35 @@
                 android:layout_height="40dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@android:drawable/btn_star_big_off"
+                app:tint="@color/hi_tech_secondary"
                 android:scaleType="centerInside"
                 android:contentDescription="Toggle favorite" />
 
         </LinearLayout>
 
-        <!-- Author -->
         <TextView
             android:id="@+id/tvBookAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:textColor="?android:attr/textColorSecondary"
+            android:textColor="@color/hi_tech_textSecondary"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="12dp" />
 
-        <!-- Info row: Genre chip + Year + Pages -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="4dp">
+            android:layout_marginBottom="8dp">
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipGenre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
+                app:chipBackgroundColor="@color/hi_tech_primaryContainer"
+                android:textColor="@color/hi_tech_primary"
                 style="@style/Widget.Material3.Chip.Assist" />
 
             <TextView
@@ -77,20 +84,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-                android:textColor="?android:attr/textColorSecondary"
-                android:layout_marginStart="12dp" />
+                android:textColor="@color/hi_tech_textSecondary"
+                android:layout_marginStart="16dp" />
 
             <TextView
                 android:id="@+id/tvBookPages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
-                android:textColor="?android:attr/textColorSecondary"
-                android:layout_marginStart="12dp" />
+                android:textColor="@color/hi_tech_textSecondary"
+                android:layout_marginStart="16dp" />
 
         </LinearLayout>
 
-        <!-- Rating -->
         <RatingBar
             android:id="@+id/ratingBarSmall"
             style="?android:attr/ratingBarStyleSmall"
@@ -99,7 +105,8 @@
             android:numStars="5"
             android:stepSize="0.5"
             android:isIndicator="true"
-            android:layout_marginTop="4dp" />
+            android:progressTint="@color/hi_tech_secondary"
+            android:secondaryProgressTint="@color/hi_tech_secondary" />
 
     </LinearLayout>
 

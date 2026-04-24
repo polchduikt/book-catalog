@@ -26,6 +26,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
+
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -101,8 +103,11 @@ public class MainActivity extends AppCompatActivity {
     private void setupRecyclerView() {
         adapter = new BookAdapter();
         rvBooks.setLayoutManager(new LinearLayoutManager(this));
+        SlideInUpAnimator animator = new SlideInUpAnimator();
+        animator.setAddDuration(300);
+        animator.setRemoveDuration(300);
+        rvBooks.setItemAnimator(animator);
         rvBooks.setAdapter(adapter);
-
         adapter.setOnBookClickListener(new BookAdapter.OnBookClickListener() {
             @Override
             public void onBookClick(Book book) {

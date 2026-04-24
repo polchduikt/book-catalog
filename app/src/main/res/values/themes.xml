@@ -1,28 +1,47 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.BookCatalog" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/md_theme_light_primary</item>
-        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
-        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
-        <item name="colorSecondary">@color/md_theme_light_secondary</item>
-        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
-        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
-        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
-        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
-        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
-        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
-        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
-        <item name="colorError">@color/md_theme_light_error</item>
-        <item name="colorOnError">@color/md_theme_light_onError</item>
-        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
-        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
-        <item name="android:colorBackground">@color/md_theme_light_background</item>
-        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
-        <item name="colorSurface">@color/md_theme_light_surface</item>
-        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+    <style name="Base.Theme.BookCatalog" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/hi_tech_primary</item>
+        <item name="colorOnPrimary">@color/hi_tech_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/hi_tech_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/hi_tech_onPrimaryContainer</item>
+        
+        <item name="colorSecondary">@color/hi_tech_secondary</item>
+        <item name="colorOnSecondary">@color/hi_tech_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/hi_tech_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/hi_tech_onSecondaryContainer</item>
+        
+        <item name="colorTertiary">@color/hi_tech_tertiary</item>
+        <item name="colorOnTertiary">@color/hi_tech_onTertiary</item>
+        
+        <item name="colorError">@color/hi_tech_error</item>
+        <item name="colorOnError">@color/hi_tech_onError</item>
+        
+        <item name="android:colorBackground">@color/hi_tech_background</item>
+        <item name="colorOnBackground">@color/hi_tech_textPrimary</item>
+        
+        <item name="colorSurface">@color/hi_tech_surface</item>
+        <item name="colorOnSurface">@color/hi_tech_textPrimary</item>
+        <item name="colorSurfaceVariant">@color/hi_tech_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/hi_tech_textSecondary</item>
+
+        <item name="materialCardViewStyle">@style/HiTechCardView</item>
+        <item name="floatingActionButtonStyle">@style/HiTechFab</item>
     </style>
 
     <style name="Theme.BookCatalog" parent="Base.Theme.BookCatalog" />
+
+    <style name="HiTechCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/hi_tech_surface</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/hi_tech_surface_variant</item>
+    </style>
+
+    <style name="HiTechFab" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/hi_tech_primary</item>
+        <item name="tint">@color/hi_tech_onPrimary</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="elevation">8dp</item>
+    </style>
 </resources>
