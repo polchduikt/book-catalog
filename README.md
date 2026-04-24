@@ -1,4 +1,6 @@
-# BookCatalog (Cyber Edition)
+# BookCatalog
+
+![Main Screen](screenshots/home.jpg)
 
 BookCatalog is a native Android application designed for managing a personal library of books. It features a modern, high-tech "cyber" aesthetic with smooth animations, dark mode default, and a robust local database.
 
